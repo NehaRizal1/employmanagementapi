@@ -26,7 +26,12 @@ public class EmployController {
 		
 		return employRepository.findAll();
 	}	
-	
+
+	@GetMapping("/checkService")
+	public String test(){
+		return "service is running....";
+	}
+
 	@PostMapping("/addemploy")
 	public String addEmploy(@RequestBody Employ employ) {
 	
